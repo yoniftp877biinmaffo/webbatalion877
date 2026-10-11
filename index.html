@@ -1,167 +1,31 @@
-<!-- 
-THEME: Small Apps | Bootstrap App Landing Template
-VERSION: 1.0.0
-AUTHOR: Themefisher
+@@include('header.htm')
 
-HOMEPAGE: https://themefisher.com/products/small-apps-free-app-landing-page-template/
-DEMO: https://demo.themefisher.com/small-apps/
-GITHUB: https://github.com/themefisher/Small-Apps-Bootstrap-App-Landing-Template
+@@include('blocks/navigation.htm', {"home":"active", "home1": "active"})
 
-Get HUGO Version : https://themefisher.com/products/small-apps-hugo-app-landing-theme/
-
-WEBSITE: https://themefisher.com
-TWITTER: https://twitter.com/themefisher
-FACEBOOK: https://www.facebook.com/themefisher
--->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Batalyon Modern</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome untuk ikon militer/umum -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        tactical: {
-                            dark: '#0f172a',      // Slate 900
-                            card: '#1e293b',      // Slate 800
-                            green: '#15803d',     // Green 700
-                            accent: '#22c55e',    // Green 500
-                            gold: '#ca8a04',      // Yellow 600
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-slate-950 text-slate-100 font-sans">
-
-    <!-- Navbar Utama -->
-    <nav class="bg-tactical-dark border-b border-slate-800 sticky top-0 z-50 shadow-2xl">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                
-                <!-- KIRI: Brand / Logo Batalyon -->
-                <div class="flex items-center space-x-3 shrink-0">
-                    <div class="w-11 h-11 bg-gradient-to-br from-tactical-green to-slate-900 border border-tactical-accent/40 rounded-lg flex items-center justify-center shadow-inner">
-                        <i class="fa-solid fa-shield-halved text-tactical-accent text-xl"></i>
-                    </div>
-                    <div>
-                        <span class="block text-[10px] font-semibold tracking-widest text-tactical-gold uppercase">Situs Resmi</span>
-                        <span class="text-base font-bold tracking-wider text-white uppercase">Yonif 300 / Raider</span>
-                    </div>
-                </div>
-
-                <!-- KANAN: Seluruh Menu Navigasi + Blog + Status + Tombol Lapor -->
-                <div class="hidden lg:flex items-center space-x-2 xl:space-x-3">
-                    
-                    <!-- Menu Navigasi Utama -->
-                    <a href="#" class="px-2.5 py-1.5 rounded-md text-xs font-semibold text-white bg-tactical-card border border-slate-700/60 transition shadow-sm">
-                        <i class="fa-solid fa-house mr-1 text-tactical-accent"></i> Beranda
-                    </a>
-                    <a href="#" class="px-2.5 py-1.5 rounded-md text-xs font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">
-                        <i class="fa-solid fa-user-shield mr-1 text-slate-400"></i> Profil Satuan
-                    </a>
-                    <a href="#" class="px-2.5 py-1.5 rounded-md text-xs font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">
-                        <i class="fa-solid fa-medal mr-1 text-slate-400"></i> Galeri & Prestasi
-                    </a>
-                    <a href="#" class="px-2.5 py-1.5 rounded-md text-xs font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">
-                        <i class="fa-solid fa-address-book mr-1 text-slate-400"></i> Kontak
-                    </a>
-
-                    <!-- Garis Pemisah Tipis -->
-                    <div class="h-5 w-[1px] bg-slate-800 my-auto"></div>
-
-                    <!-- Widget Blog/Berita (Kecil & Ringkas) -->
-                    <a href="#" class="group flex items-center space-x-2 bg-slate-900/90 hover:bg-slate-800 px-2.5 py-1.5 rounded-lg border border-slate-800 hover:border-slate-700 transition">
-                        <div class="w-5 h-5 rounded bg-tactical-accent/10 flex items-center justify-center text-tactical-accent group-hover:bg-tactical-accent group-hover:text-slate-950 transition">
-                            <i class="fa-solid fa-newspaper text-[10px]"></i>
-                        </div>
-                        <div class="text-left leading-tight">
-                            <span class="block text-[11px] font-semibold text-slate-200 group-hover:text-white transition">Blog</span>
-                        </div>
-                        <i class="fa-solid fa-chevron-right text-[9px] text-slate-500 group-hover:translate-x-0.5 group-hover:text-slate-300 transition"></i>
-                    </a>
-
-                    <!-- Indikator Status Siaga -->
-                    <div class="flex items-center space-x-1.5 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-slate-800/80">
-                        <span class="relative flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                        </span>
-                        <span class="text-[10px] font-bold tracking-wide text-emerald-400 uppercase">Siaga I</span>
-                    </div>
-
-                    <!-- Tombol Lapor -->
-                    <a href="#" class="bg-tactical-green hover:bg-green-600 text-white px-3 py-1.5 rounded-lg text-xs font-semibold tracking-wide transition shadow-md flex items-center space-x-1.5 border border-green-600">
-                        <i class="fa-solid fa-file-shield text-xs"></i>
-                        <span>Lapor</span>
-                    </a>
-                </div>
-
-                <!-- Tombol Hamburger (Mobile Menu Toggle) -->
-                <div class="flex lg:hidden">
-                    <button id="menu-btn" type="button" class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-md bg-slate-900 border border-slate-800">
-                        <i class="fa-solid fa-bars text-lg"></i>
-                    </button>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Menu Dropdown (Mobile) -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-tactical-dark border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
-            <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-white bg-tactical-card border border-slate-700/60">
-                <i class="fa-solid fa-house mr-2 text-tactical-accent"></i> Beranda
-            </a>
-            <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800">
-                <i class="fa-solid fa-user-shield mr-2 text-slate-400"></i> Profil Satuan
-            </a>
-            <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800">
-                <i class="fa-solid fa-medal mr-2 text-slate-400"></i> Galeri & Prestasi
-            </a>
-            <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800">
-                <i class="fa-solid fa-address-book mr-2 text-slate-400"></i> Kontak
-            </a>
-            <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-tactical-accent hover:bg-slate-800">
-                <i class="fa-solid fa-newspaper mr-2"></i> Blog & Berita Satuan
-            </a>
-            <div class="pt-2">
-                <a href="#" class="w-full text-center block bg-tactical-green hover:bg-green-600 text-white px-4 py-2 rounded-lg text-xs font-semibold tracking-wide transition shadow-md">
-                    <i class="fa-solid fa-file-shield mr-1.5"></i> Piket / Lapor
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Content Placeholder -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="bg-tactical-card border border-slate-800 p-8 rounded-2xl shadow-xl text-center">
-            <h1 class="text-2xl font-bold tracking-wider mb-2 text-white uppercase">Portal Resmi Batalyon</h1>
-            <p class="text-slate-400 text-sm max-w-xl mx-auto">Seluruh menu utama kini berada di sebelah kanan secara rapi, menciptakan ruang yang bersih dan lega di sebelah kiri logo kesatuan.</p>
-        </div>
-    </main>
-
-    <script>
-        const btn = document.getElementById('menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
-</body>
-</html>
+<!--====================================
+=            Hero Section            =
+=====================================-->
+<section class="section gradient-banner">
+	<div class="shapes-container">
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+		<div class="shape" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"></div>
+		<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="500"></div>
+		<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"></div>
+		<div class="shape" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0"></div>
+		<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
+	</div>
+</section>
+<!--====  End of Hero Section  ====-->
 
 <section class="section pt-0 position-relative pull-top">
 	<div class="container">
@@ -349,41 +213,25 @@ FACEBOOK: https://www.facebook.com/themefisher
 <!--=================================
 =            Video Promo            =
 ==================================-->
-
 <section class="video-promo section bg-1">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="content-block text-center">
-
-                    <!-- Heading -->
-                    <h2>BIINMAFFO FIGHTER</h2>
-
-                    <!-- Deskripsi -->
-                    <p>
-                        Arena para petarung. Tempat keberanian diuji
-                        dan kehormatan dijunjung tinggi.
-                        TNI KUAT, TANGGUH, BIJAKSANA!
-                    </p>
-
-                    <!-- Tombol menuju TikTok -->
-                    <a href="https://www.tiktok.com/@yoniftp877biinmaffo/video/7693770105196629268"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="tiktok-button"
-                       aria-label="Tonton video BIINMAFFO FIGHTER di TikTok">
-
-                        <i class="ti-control-play video"></i>
-                        
-
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="content-block">
+					<!-- Heading -->
+					<h2>Watch Our Promo Video</h2>
+					<!-- Promotional Speech -->
+					<p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et,
+						porttitor at sem. Vivamus </p>
+					<!-- Popup Video -->
+					<a data-fancybox href="https://www.youtube.com/watch?v=jrkvirglgaQ">
+						<i class="ti-control-play video"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
-
 <!--====  End of Video Promo  ====-->
 
 <!--=================================
@@ -474,142 +322,8 @@ FACEBOOK: https://www.facebook.com/themefisher
 </section>
 <!--====  End of Testimonial  ====-->
 
-<section class="call-to-action-app section bg-blue">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<h2>It's time to change your mind</h2>
-				<p>Download over 2 million humans .Get <a href="https://themefisher.com/products/small-apps-free-app-landing-page-template/">Small Apps</a> free forever!
-					<br>We say you won’t look back.</p>
-				<ul class="list-inline">
-					<li class="list-inline-item">
-						<a href="" class="btn btn-rounded-icon">
-							<i class="ti-apple"></i>
-							Iphone
-						</a>
-					</li>
-					<li class="list-inline-item">
-						<a href="" class="btn btn-rounded-icon">
-							<i class="ti-android"></i>
-							Android
-						</a>
-					</li>
-					<li class="list-inline-item">
-						<a href="" class="btn btn-rounded-icon">
-							<i class="ti-microsoft-alt"></i>
-							Windows
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</section>
+@@include('blocks/call-to-action-app.htm')
 
-<!--============================
-=            Footer            =
-=============================-->
-<footer>
-  <div class="footer-main">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-12 m-md-auto align-self-center">
-          <div class="block">
-            <a href="index.html"><img src="images/logo-alt.png" alt="footer-logo"></a>
-            <!-- Social Site Icons -->
-            <ul class="social-icon list-inline">
-              <li class="list-inline-item">
-                <a href="https://www.facebook.com/themefisher"><i class="ti-facebook"></i></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://twitter.com/themefisher"><i class="ti-twitter"></i></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.instagram.com/themefisher/"><i class="ti-instagram"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-          <div class="block-2">
-            <!-- heading -->
-            <h6>Product</h6>
-            <!-- links -->
-            <ul>
-              <li><a href="team.html">Teams</a></li>
-              <li><a href="blog.html">Blogs</a></li>
-              <li><a href="FAQ.html">FAQs</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-          <div class="block-2">
-            <!-- heading -->
-            <h6>Resources</h6>
-            <!-- links -->
-            <ul>
-              <li><a href="sign-up.html">Singup</a></li>
-              <li><a href="sign-in.html">Login</a></li>
-              <li><a href="blog.html">Blog</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-          <div class="block-2">
-            <!-- heading -->
-            <h6>Company</h6>
-            <!-- links -->
-            <ul>
-              <li><a href="career.html">Career</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="team.html">Investor</a></li>
-              <li><a href="privacy.html">Terms</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-          <div class="block-2">
-            <!-- heading -->
-            <h6>Company</h6>
-            <!-- links -->
-            <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="text-center bg-dark py-4">
-    <small class="text-secondary">Copyright &copy; <script>document.write(new Date().getFullYear())</script>. Designed &amp; Developed by <a href="https://themefisher.com/">Themefisher</a></small class="text-secondary">
-  </div>
+@@include('blocks/footer.htm')
 
-	<div class="text-center bg-dark py-1">
-   <small> <p>Distributed By <a href="https://themewagon.com/">Themewagon</a></p></small class="text-secondary">
-  </div>
-</footer>
-
-
-  <!-- To Top -->
-  <div class="scroll-top-to">
-    <i class="ti-angle-up"></i>
-  </div>
-  
-  <!-- JAVASCRIPTS -->
-  <script src="plugins/jquery/jquery.min.js"></script>
-  <script src="plugins/bootstrap/bootstrap.min.js"></script>
-  <script src="plugins/slick/slick.min.js"></script>
-  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
-  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
-  <script src="plugins/aos/aos.js"></script>
-  <!-- google map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
-  <script src="plugins/google-map/gmap.js"></script>
-  
-  <script src="js/script.js"></script>
-</body>
-
-</html>
+@@include('footer.htm')
